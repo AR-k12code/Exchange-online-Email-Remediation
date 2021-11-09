@@ -110,6 +110,7 @@ Write-Host "Connecting to Azure AD and revoking $($userlookup) Access Token"
 Connect-AzureAD -credential $O365Cred
 Revoke-AzureADuserAllRefreshToken -objectid (Get-azureADuser -objectid $useremail).objectID
 }
+if($useremail -like "*$emaildomain"){
 Connect-ExchangeOnline -Credential $O365Cred
 while (($null -eq $Checkrules) -or ($Checkrules -eq '')) {
     [validatepattern('^(?:Y\b|N\b)')]$Checkrules = Read-Host "Do we need to check $($userlookup) Email rules? Y or N"
@@ -178,6 +179,7 @@ if ($Checkrules -eq "Y") {
         }
     }
 }#Close if check rules
+}
 Else {
     Write-Host "Moving on to remediating email" -ForegroundColor Red -BackgroundColor black 
 }
