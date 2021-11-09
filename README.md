@@ -20,6 +20,7 @@ cd \scripts
 git clone git@github.com:AR-k12code/Exchange-online-Email-Remediation.git
 cd /Exchange-online-Email-Remediation
 Copy-Item Exchange-online-Email-Remediation-Settings-Sample.ps1  -destination c:\scripts\Exchange-online-Email-Remediation-Settings.ps1
+notepad c:\scripts\Exchange-online-Email-Remediation-Settings.ps1
 ````
 ## General information and workflow
 
