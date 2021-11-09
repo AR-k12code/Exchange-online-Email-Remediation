@@ -1,0 +1,18 @@
+{
+  "version": "21.11.09",
+  "description": "Moved from closed source to open source. Fixed several logic loops; and created a settings file instead of hard coding the variables in the script",
+  "versions": [
+    {
+      "version": "21.06.01",
+  "description": "Added Revoke of sign in tokens for When password is changed. Added subject check for users within your domain. Set lookback days to default to 3 to not accidently delete all users email.Added Requires for modules needed. Changed Function Get-rulesMenu to alter variable from $rules, to $rulesmenu; also turn this into an array by default so users with 1 rule will generate a menu"
+    },
+    {
+      "version": "21.05.19",
+      "description": "Initial version for release after internal testing"
+    },
+    {
+      "version": "21.05.24",
+      "description": "Added validation checks on the Read-Host prompt. Added $adminuser before Get-credential to save the username and prompt for password to clearify woridng and descriptions"
+    }
+  ]
+}
