@@ -3,12 +3,25 @@
 Find and Delete inbox rules from users in Exchange online.  
 Create Compliance Search Policy to determined how many emails were sent from the user that matches the subject.  
 Have the option to purge the email from users mailboxes.  
-Requires these modules  
-
+  
+## Required modules 
 `Install-Module -Name ExchangeOnlineManagement`  
 `install-module -name MSonline`  
 `ActiveDirectory` [Install instructions](http://4sysops.com/wiki/how-to-install-the-powershell-active-directory-module/)  
 `Install-module -name AzureAD`
+
+## Installation
+Open Powershell as an administrator
+````
+if ((test-path c:\scripts) -eq $false){
+mkdir c:\scripts
+}else{
+cd \scripts
+git clone git@github.com:AR-k12code/Exchange-online-Email-Remediation.git
+cd /Exchange-online-Email-Remediation
+Copy-Item Exchange-online-Email-Remediation-Settings-Sample.ps1  -destination c:\scripts\Exchange-online-Email-Remediation-Settings.ps1
+````
+## General information and workflow
 
 Designed with simple prompts to use:
 
