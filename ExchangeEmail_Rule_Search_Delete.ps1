@@ -84,6 +84,10 @@ while (($null -eq $userlookup) -or ($userlookup -eq "")) {
     if ($userlookup -like "*@*") {
         $useremail = $userlookup
         $userlookup = $userlookup.split('@')[0]
+         if (($userlookup).Length -gt 20){
+            write-host "username is longer than 20 characters shortening for SAM account"
+            $userlookup = $userlookup.substring(0,20)
+        }
     }
     else {
         $useremail = ($userlookup + $emaildomain)
